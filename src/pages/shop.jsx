@@ -116,6 +116,33 @@ const mockBanner = [
   },
 ];
 
+const mockEssential = [
+  {
+    id: 1,
+    EssentialName: "Daily Essential",
+  },
+  {
+    id: 2,
+    EssentialName: "Vegetables",
+  },
+  {
+    id: 3,
+    EssentialName: "Fruits",
+  },
+  {
+    id: 4,
+    EssentialName: "Strawberry",
+  },
+  {
+    id: 5,
+    EssentialName: "Mango",
+  },
+  {
+    id: 6,
+    EssentialName: "Cherry",
+  },
+];
+
 function Shop() {
   return (
     <>
@@ -125,8 +152,8 @@ function Shop() {
       <HeroBanner />
       <ListShop products={products} />
       <TopCategory categoryitem={catagoryitem} />
-      <ElectronicsBrands banner={mockBanner}/>
-      <Essential />
+      <ElectronicsBrands banner={mockBanner} />
+      <Essential essentials={mockEssential} />
     </>
   );
 }
