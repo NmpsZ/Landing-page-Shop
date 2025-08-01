@@ -1,6 +1,6 @@
 import { FaChevronRight } from "react-icons/fa";
 
-function HeaderCategory({name}) {
+function HeaderCategory({name , highlights = ""}) {
   return (
     <div className="flex items-center justify-between border-b">
       <a
@@ -9,7 +9,7 @@ function HeaderCategory({name}) {
       >
         {name}{" "}
         <span className="group-hover:text-sky-600 transition-colors duration-300">
-          Smartphones
+          {highlights}
         </span>
       </a>
       <p className="flex items-center cursor-pointer text-sm md:text-base">
