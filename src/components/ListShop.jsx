@@ -1,11 +1,10 @@
 import HeaderCategory from "./HeaderCategory"
 
-const headerCategory = "Grab the best deal on"
 function ListShop({ products }) {
   return (
     <div className="container mx-auto px-4 py-4 mt-15">
    
-      <HeaderCategory name={headerCategory}/>
+      <HeaderCategory name= "Grab the best deal on"  highlights = "Smartphones"/>
       
       {/* Mobile: Single column scrollable */}
       <div className="block md:hidden">
@@ -13,7 +12,7 @@ function ListShop({ products }) {
           {products.map((product) => (
             <div
               key={product.id}
-              className="rounded-lg cursor-pointer hover:shadow-lg transition-shadow min-w-[280px] flex flex-col items-start relative overflow-hidden"
+              className="rounded-lg cursor-pointer hover:shadow-lg hover:border-sky-500 transition-shadow min-w-[280px] flex flex-col items-start relative overflow-hidden"
             >
               <div className="w-full flex justify-center mb-2 p-4 bg-gray-100">
                 <img
@@ -30,7 +29,7 @@ function ListShop({ products }) {
                   ฿{product.discount} ฿{product.price}
                 </p>
               </div>
-              <div className="text-green-600 border-t mt-2 pt-3 w-full px-4 text-sm">
+              <div className="text-green-600 border-t mt-2 pt-3 w-full px-4 pb-4 text-sm">
                 Save-${product.discount}
               </div>
             </div>
@@ -44,7 +43,7 @@ function ListShop({ products }) {
           {products.map((product) => (
             <div
               key={product.id}
-              className="rounded-lg cursor-pointer hover:shadow-lg transition-shadow flex flex-col items-start relative overflow-hidden"
+              className="rounded-lg cursor-pointer hover:shadow-lg hover:border-sky-500 transition-shadow flex flex-col items-start relative overflow-hidden"
             >
               <div className="w-full flex justify-center mb-2 p-4 bg-gray-100">
                 <img
@@ -61,7 +60,7 @@ function ListShop({ products }) {
                   ฿{product.discount} ฿{product.price}
                 </p>
               </div>
-              <div className="text-green-600 border-t mt-2 pt-3 w-full px-4 text-sm">
+              <div className="text-green-600 border-t mt-2 pt-3 w-full px-4 pb-4 text-sm">
                 Save-${product.discount}
               </div>
             </div>
@@ -74,7 +73,7 @@ function ListShop({ products }) {
         {products.map((product) => (
           <div
             key={product.id}
-            className="rounded-lg cursor-pointer hover:shadow-lg transition-shadow max-w-xs flex flex-col items-start relative overflow-hidden"
+            className="hover:border rounded-lg cursor-pointer hover:shadow-lg hover:border-sky-500 transition-shadow max-w-xs flex flex-col items-start relative overflow-hidden"
           >
             <div className="w-full flex justify-center mb-2 p-4 bg-gray-100">
               <img
@@ -91,7 +90,7 @@ function ListShop({ products }) {
                 ฿{product.discount} ฿{product.price}
               </p>
             </div>
-            <div className="text-green-600 border-t mt-2 pt-3 w-full px-4">
+            <div className="text-green-600 border-t mt-2 pt-3 w-full px-4 pb-4">
               Save-${product.discount}
             </div>
           </div>
