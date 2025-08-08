@@ -1,4 +1,16 @@
-function Pagination({ totalPages, currentPage, onPageChange }) {
+import React from "react";
+
+type PaginationProps = {
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+};
+
+const Pagination: React.FC<PaginationProps> = ({
+  totalPages,
+  currentPage,
+  onPageChange,
+}) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
@@ -22,6 +34,7 @@ function Pagination({ totalPages, currentPage, onPageChange }) {
       })}
     </div>
   );
-}
+};
 
 export default Pagination;
+

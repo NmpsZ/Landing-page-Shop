@@ -1,10 +1,15 @@
 import { FaChevronRight } from "react-icons/fa";
 
-function HeaderCategory({name , highlights = ""}) {
+type HeaderCategoryProps = {
+  name: string;
+  highlights?: string;
+};
+
+function HeaderCategory({ name, highlights = "" }: HeaderCategoryProps) {
   return (
     <div className="flex items-center justify-between border-b">
       <a
-        href=""
+        href="#"
         className="relative inline-block font-semibold text-base md:text-lg pb-1 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-sky-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left group"
       >
         {name}{" "}
@@ -20,3 +25,4 @@ function HeaderCategory({name , highlights = ""}) {
 }
 
 export default HeaderCategory;
+

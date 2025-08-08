@@ -1,6 +1,18 @@
 import { FaChevronDown } from "react-icons/fa";
+import React from "react";
 
-function Category({ categories = [] }) {
+type CategoryItem = {
+  name: string;
+  icon?: React.ReactNode;
+  hasDropdown?: boolean;
+  active?: boolean;
+};
+
+type CategoryProps = {
+  categories?: CategoryItem[];
+};
+
+function Category({ categories = [] }: CategoryProps) {
   return (
     <div className="bg-white border-t border-gray-200">
       <div className="container mx-auto px-6 flex items-center py-3 gap-4 xl:gap-14 overflow-x-auto">
