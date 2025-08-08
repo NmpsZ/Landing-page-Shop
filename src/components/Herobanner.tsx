@@ -5,9 +5,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function HeroBanner() {
   return (
-    <div className="container mx-auto relative mt-5"> {/* เพิ่ม relative ที่ container */}
+    <div className="container mx-auto relative mt-5">
       <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden">
-        {/* ภาพพื้นหลังและเนื้อหาอื่น ๆ เหมือนเดิม */}
+     
         <img
           src={Background}
           alt="Hero Banner"
@@ -26,7 +26,6 @@ function HeroBanner() {
           className="absolute top-1/2 right-3 md:right-30 lg:right-42 transform -translate-y-1/2 w-32 md:w-60 lg:w-80 object-contain z-20"
         />
 
-        {/* ข้อความบนภาพ */}
         <div className="absolute inset-0 flex flex-col justify-start mt-16 pl-4 sm:pl-6 md:pl-12 lg:pl-16 gap-2 sm:gap-3 md:gap-4 lg:gap-6 md:ms-5 z-30">
           <div className="max-w-[200px] sm:max-w-[250px] md:max-w-[400px] lg:max-w-[600px]">
             <p className="text-white text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl font-normal mb-4 sm:mb-3 md:mb-4 lg:mb-5">
@@ -42,12 +41,10 @@ function HeroBanner() {
         </div>
       </div>
 
-      {/* ปุ่ม Prev (ซ้าย) */}
       <button className="hidden sm:flex absolute top-1/2 left-0 xl:-left-10 transform -translate-y-1/2 bg-sky-100 text-black p-5 xl:p-8 rounded-full shadow-sm hover:shadow-md transition z-50">
         <FaChevronLeft className="text-sm text-sky-600" />
       </button>
 
-      {/* ปุ่ม Next (ขวา) */}
       <button className="hidden sm:flex absolute top-1/2 right-0 xl:-right-10 transform -translate-y-1/2 bg-sky-100 text-black p-5 xl:p-8 rounded-full shadow-sm hover:shadow-md transition z-50">
         <FaChevronRight className="text-sm text-sky-600" />
       </button>

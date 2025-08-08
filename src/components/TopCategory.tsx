@@ -1,9 +1,20 @@
+import React from "react";
 import HeaderCategory from "./HeaderCategory";
 
-function TopCategory({ categoryitem = [] }) {
+type CategoryItem = {
+  id: string | number;
+  imageUrl: string;
+  CategoryName: string;
+};
+
+type TopCategoryProps = {
+  categoryitem?: CategoryItem[];
+};
+
+const TopCategory: React.FC<TopCategoryProps> = ({ categoryitem = [] }) => {
   return (
     <div className="container mx-auto px-4 py-4 mt-20">
-      <HeaderCategory name= "Shop From" highlights="Top Categories" />
+      <HeaderCategory name="Shop From" highlights="Top Categories" />
 
       {/* Horizontal scrollable layout for all screen sizes */}
       <div className="overflow-x-auto mt-4">
@@ -21,7 +32,7 @@ function TopCategory({ categoryitem = [] }) {
                 />
               </div>
               <div className="mt-2 sm:mt-3 px-2 max-w-[80px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[140px]">
-                <p className="font-semibold text-center text-xs sm:text-sm md:text-base lg:text-lg leading-tight">
+                <p className="font-normal text-center text-xs sm:text-sm md:text-base lg:text-lg leading-tight">
                   {catagoryitem.CategoryName}
                 </p>
               </div>
@@ -31,6 +42,6 @@ function TopCategory({ categoryitem = [] }) {
       </div>
     </div>
   );
-}
+};
 
 export default TopCategory;

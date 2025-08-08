@@ -26,7 +26,6 @@ function Navbar() {
     <div className="bg-white shadow-md py-5">
       <div className="container mx-auto px-4 flex items-center justify-between gap-4">
         
-        {/* Left: Hamburger + Logo */}
         <div className="flex items-center gap-2 min-w-fit">
           <button className="text-lg md:text-2xl text-sky-600 hover:bg-blue-100 p-2 rounded-md">
             <FaBars />
@@ -34,7 +33,6 @@ function Navbar() {
           <h1 className="text-lg md:text-2xl font-bold text-sky-600">MegaMart</h1>
         </div>
 
-        {/* Center: Search */}
         <div className="relative w-full max-w-md">
           <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-sky-600" />
           <input
@@ -45,7 +43,6 @@ function Navbar() {
           <FaList className="absolute right-3 top-1/2 -translate-y-1/2 text-sky-600" />
         </div>
 
-        {/* Right: Icons */}
         <div className="flex items-center gap-3 min-w-fit">
           <button className="text-sm flex items-center px-3 gap-1 border-e border-gray-300">
             <FaUser className="text-sky-600" />
